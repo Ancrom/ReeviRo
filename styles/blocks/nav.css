@@ -1,0 +1,32 @@
+/* ==================== NAV ==================== */
+.nav {
+	width: 100%;
+	position: absolute;
+	padding: 25px 0;
+	z-index: 999;
+}
+.nav__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.nav__logo {
+	font-size: 40px;
+	font-weight: 600;
+	color: #FFFFFF;
+	letter-spacing: 1px;
+}
+.nav__list{
+	display: flex;
+}
+.nav__link {
+	text-transform: uppercase;
+	color: var(--link-color);
+	transition: color var(--transition);
+}
+.nav__link:hover {
+	color: var(--link-hover);
+}
+.nav__item + .nav__item {
+	margin: 0 0 0 20px;
+}

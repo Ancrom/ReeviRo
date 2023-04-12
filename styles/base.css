@@ -1,0 +1,49 @@
+/* ==================== VARIABLES ==================== */
+:root {
+	--container-width: 1280px;
+	--site-padding: 40px;
+	--link-color: #ffffff;
+	--link-hover: #e99898;
+	--color-main: #f4f2ee;
+	--transition: 0.4s ease;
+	--transition-fast: 0.2s ease;
+}
+
+/* ==================== BASE ==================== */
+body {
+	display: flex;
+	flex-flow: column;
+	min-height: 100vh;
+	font-family: "Pathway Gothic One", sans-serif;
+	font-size: 24px;
+	line-height: 1.1;
+	background: var(--color-main);
+	position: relative;
+}
+
+.main {
+	flex: 1 1 auto;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: var(--container-width);
+	padding: 0 var(--site-padding);
+}
+.container--big {
+	max-width: 1480px;
+}
+
+.image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.image > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
