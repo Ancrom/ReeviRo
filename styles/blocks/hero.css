@@ -1,7 +1,6 @@
 /* ==================== HERO ==================== */
 
 .hero {
-	padding: 80px 0 0 0;
 	background: no-repeat top / cover url(./../../img/Valorant_zine_illustration_ReeviRo.webp);
 	background-attachment: fixed;
 	color: #FFFFFF;
@@ -12,7 +11,7 @@
 	flex-flow: column;
 	justify-content: center;
 	align-items: center;
-	min-height: calc(100vh - 80px);
+	min-height: 100vh;
 }
 .hero__title {
 	font-size: 90px;
