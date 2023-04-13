@@ -6,7 +6,7 @@ burger();
 
 function burger() {
   const burger = document.querySelector(".burger");
-  const nav = document.querySelector(".nav__list");
+  const nav = document.querySelector(".nav__menu");
 
   // Burger show / close
   burger.onclick = () => {
