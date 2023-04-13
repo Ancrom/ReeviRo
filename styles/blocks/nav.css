@@ -15,6 +15,7 @@
 	font-weight: 400;
 	color: #FFFFFF;
 	letter-spacing: 1.5px;
+	text-shadow: 1px 1px 2px rgb(0, 0, 0);
 }
 .nav__list{
 	display: flex;
