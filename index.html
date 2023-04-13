@@ -13,8 +13,10 @@
 	<link rel="stylesheet" href="./styles/reset.css">
 	<!-- main styles -->
 	<link rel="stylesheet" href="./styles/base.css">
-	<!-- blocks css -->
+	<!-- blocks styles -->
 	<link rel="stylesheet" href="./styles/blocks/nav.css">
+	<link rel="stylesheet" href="./styles/blocks/burger.css">
+	<link rel="stylesheet" href="./styles/blocks/logo.css">
 	<link rel="stylesheet" href="./styles/blocks/hero.css">
 	<link rel="stylesheet" href="./styles/blocks/gallery.css">
 	<link rel="stylesheet" href="./styles/blocks/footer.css">
@@ -29,7 +31,9 @@
 <body>
 	<nav class="nav">
 		<div class="nav__container container">
-
+			<button class="nav__burger burger burger--white">
+				<span class="burger__line"></span>
+			</button>
 			<ul class="nav__list">
 				<li class="nav__item">
 					<a href="./concept.html" class="nav__link">concept</a>
@@ -43,6 +47,9 @@
 				<li class="nav__item">
 					<a href="./about.html" class="nav__link">about</a>
 				</li>
+				<li class="nav__item nav__contact-me">
+					<a href="mailto:natalia2dartist@gmail.com" target="_blank" class="nav__link">Contact me</a>
+				</li>
 			</ul>
 		</div>
 		<!-- container -->
@@ -52,8 +59,8 @@
 		<section class="hero">
 			<div class="hero__container container">
 				<h1 class="hero__title">Natalya&nbsp;Samutina</h1>
-				<div class="nav__logo logo logo--white">
-					<a href="#">ReeviRo</a>
+				<div class="logo logo--white">
+					<a href="./index.html">ReeviRo</a>
 				</div>
 				<div class="hero__subtitle">Concept&nbsp;Artist & Illustrator</div>
 			</div>
@@ -61,31 +68,31 @@
 		</section>
 		<!-- /hero -->
 		<section class="gallery">
-			<div class="gallery__container container">
-				<div class="gallery__column">
+			<div class="gallery__container container gallery__container--col-2">
+				<div class="gallery__column gallery__column--col-2">
 					<div class="gallery__item" data-aos="fade-down-right" data-aos-duration="500" data-aos-once="true">
 						<img src="./img/main/preview/Foxgirl.webp" alt="Portfolio picture" class="gallery__image">
 						<span class="gallery__text">Foxgirl</span>
 					</div>
-					<div class="gallery__item"  data-aos="fade-right" data-aos-duration="500" data-aos-once="true">
+					<div class="gallery__item" data-aos="fade-right" data-aos-duration="500" data-aos-once="true">
 						<img src="./img/main/preview/Gwen_Seamstress.webp" alt="Portfolio picture" class="gallery__image">
 						<span class="gallery__text">Gwen Seamstress</span>
 					</div>
-					<div class="gallery__item"  data-aos="fade-up-right" data-aos-duration="500" data-aos-once="true">
+					<div class="gallery__item" data-aos="fade-up-right" data-aos-duration="500" data-aos-once="true">
 						<img src="./img/main/preview/Ice_knight.webp" alt="Portfolio picture" class="gallery__image">
 						<span class="gallery__text">Ice knight</span>
 					</div>
 				</div>
-				<div class="gallery__column"  data-aos="fade-down-left" data-aos-duration="500" data-aos-once="true">
+				<div class="gallery__column gallery__column--col-2" data-aos="fade-down-left" data-aos-duration="500" data-aos-once="true">
 					<div class="gallery__item">
 						<img src="./img/main/preview/Hades2_fanart.webp" alt="Portfolio picture" class="gallery__image">
 						<span class="gallery__text">Hades2 fanart</span>
 					</div>
-					<div class="gallery__item"  data-aos="fade-left" data-aos-duration="500" data-aos-once="true">
+					<div class="gallery__item" data-aos="fade-left" data-aos-duration="500" data-aos-once="true">
 						<img src="./img/main/preview/Ice_legend.webp" alt="Portfolio picture" class="gallery__image">
 						<span class="gallery__text">Ice legend</span>
 					</div>
-					<div class="gallery__item"  data-aos="fade-up-left" data-aos-duration="500" data-aos-once="true">
+					<div class="gallery__item" data-aos="fade-up-left" data-aos-duration="500" data-aos-once="true">
 						<img src="./img/main/preview/Lava_elemental.webp" alt="Portfolio picture" class="gallery__image">
 						<span class="gallery__text">Lava elemental</span>
 					</div>
@@ -155,7 +162,7 @@
 	<div class="contact-me">
 		<a href="mailto:natalia2dartist@gmail.com" target="_blank" class="contact-me__link">Contact me</a>
 	</div>
-<!-- /contactme -->
+	<!-- /contac-tme -->
 	<div class="lightbox">
 		<img src="" class="lightbox__image" alt="Fullsize portfolio picture">
 	</div>

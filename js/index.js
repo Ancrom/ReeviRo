@@ -1,6 +1,21 @@
 // Animate on scroll initialize
 AOS.init();
 
+// Burger
+burger();
+
+function burger() {
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector(".nav__list");
+
+  // Burger show / close
+  burger.onclick = () => {
+    burger.classList.toggle("active");
+    nav.classList.toggle("active");
+		document.body.classList.toggle("no-scroll");
+  };
+}
+
 // lightbox
 lightbox();
 
@@ -13,9 +28,8 @@ function lightbox() {
       // getting path to fullsize clicked image
       const src = item.children[0].getAttribute("src").split("/");
       src.splice(src.indexOf("preview"), 1);
-      const newPath = src.join("/");
       // lightbox show
-      lightbox.children[0].setAttribute("src", newPath);
+      lightbox.children[0].setAttribute("src", src.join("/"));
       lightbox.classList.add("active");
     };
   });

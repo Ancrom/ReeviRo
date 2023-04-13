@@ -23,3 +23,9 @@
 	border: 2px solid #000;
 	transition: all var(--transition);
 }
+
+@media (max-width: 769px) {
+	.contact-me {
+		display: none;
+	}
+}
