@@ -7,17 +7,18 @@
 }
 .nav__container {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-end;
 	align-items: center;
 }
 .nav__logo {
 	font-size: 40px;
-	font-weight: 600;
+	font-weight: 400;
 	color: #FFFFFF;
-	letter-spacing: 1px;
+	letter-spacing: 1.5px;
 }
 .nav__list{
 	display: flex;
+	justify-self: flex-end;
 }
 .nav__link {
 	text-transform: uppercase;
