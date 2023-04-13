@@ -2,12 +2,13 @@
 
 .gallery {
 	padding: 80px 0;
+	overflow: hidden;
 }
 .gallery__container {
 	display: flex;
 }
 .gallery__column--col-2 {
-	flex: 0 1 50%;
+	flex: 1 1 50%;
 }
 .gallery__column + .gallery__column {
 	margin: 0 0 0 10px;

@@ -1,7 +1,7 @@
-// Animate on scroll initialize
+/* ==================== ANIMATE ON SCROLL ==================== */
 AOS.init();
 
-// Burger
+/* ==================== BURGER ==================== */
 burger();
 
 function burger() {
@@ -16,7 +16,7 @@ function burger() {
   };
 }
 
-// lightbox
+/* ==================== LIGHTBOX ==================== */
 lightbox();
 
 function lightbox() {
