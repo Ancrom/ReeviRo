@@ -1,0 +1,24 @@
+/* ==================== SOCIAL ==================== */
+
+.social {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.social__link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	max-width: 40px;
+	max-height: 40px;
+}
+.social__link:hover svg {
+	transform: scale(1.2);
+	transition: transform var(--transition);
+}
+.social__link svg {
+	transition: transform var(--transition);
+	height: 100%;
+	width: 100%;
+}

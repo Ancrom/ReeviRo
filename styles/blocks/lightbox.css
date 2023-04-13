@@ -1,0 +1,27 @@
+/* ==================== LIGHTBOX ==================== */
+
+.lightbox {
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	min-width: 100vw;
+	min-height: 100vh;
+	background: var(--color-main);
+	cursor: zoom-out;
+	display: grid;
+	place-items: center;
+	opacity: 0;
+	visibility: hidden;
+	transition: all var(--transition-fast);
+}
+.lightbox__image {
+	max-width: 100vw;
+	max-height: 100vh;
+}
+
+.lightbox.active {
+	opacity: 1;
+	visibility: visible;
+	transition: all var(--transition-fast);
+}
