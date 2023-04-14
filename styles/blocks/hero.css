@@ -1,7 +1,7 @@
 /* ==================== HERO ==================== */
 
 .hero {
-	background: no-repeat 5% 0 / auto 100vh url(./../../img/Valorant_zine_illustration_ReeviRo.webp);
+	background: no-repeat 8% 0 / auto 100vh url(./../../img/Valorant_zine_illustration_ReeviRo.webp);
 	background-attachment: fixed;
 	color: var(--text-color);
 	text-align: center;
