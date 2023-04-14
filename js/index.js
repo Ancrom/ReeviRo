@@ -23,11 +23,11 @@ function lightbox() {
 
   galleryItems.forEach((item) => {
     item.onclick = () => {
-      // getting path to fullsize clicked image
+      // changing path to fullsize clicked image
       const src = item.children[0].getAttribute("src").split("/");
       src.splice(src.indexOf("preview"), 1);
-      // lightbox show
       lightbox.children[0].setAttribute("src", src.join("/"));
+      // lightbox show
       lightbox.classList.add("active");
       if (window.innerWidth < 768) {
         document.body.classList.add("no-scroll");
