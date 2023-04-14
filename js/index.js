@@ -35,10 +35,11 @@ function lightbox() {
     };
   });
 
-	// lightbox close
+  // lightbox close
   function lightBoxClose() {
     lightbox.classList.remove("active");
     document.body.classList.remove("no-scroll");
+    lightbox.children[0].setAttribute("src", "");
   }
   lightbox.onclick = () => lightBoxClose();
   window.onscroll = () => lightBoxClose();
