@@ -4,6 +4,7 @@
 	position: absolute;
 	z-index: 999;
 	padding: 10px 0 0;
+	overflow-x: hidden;
 }
 .nav__container {
 	display: flex;
