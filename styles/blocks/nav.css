@@ -17,7 +17,7 @@
 	position: fixed;
 	background: var(--color-main);
 	top: 0;
-	bottom: 0;
+	bottom: -60px;
 	left: 0;
 	right: 0;
 	transform: translate(100%, 0);
@@ -104,7 +104,13 @@
 	}
 }
 
-@media (orientation: landscape) and (max-width: 769px) {
+@media (max-width: 1025px) {
+	.nav__list {
+		padding: 60px 0 70px;
+	}
+}
+
+@media  (orientation: landscape) and (max-width: 1025px) {
 	.nav__list {
 		padding: 160px 0 70px;
 	}

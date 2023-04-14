@@ -13,7 +13,7 @@
 	place-items: center;
 	opacity: 0;
 	visibility: hidden;
-	transition: all var(--transition-fast);
+	transition: opacity var(--transition);
 }
 .lightbox__image {
 	display: block;
@@ -25,5 +25,5 @@
 .lightbox.active {
 	opacity: 1;
 	visibility: visible;
-	transition: all var(--transition-fast);
+	transition: opacity var(--transition);
 }

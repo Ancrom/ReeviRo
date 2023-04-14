@@ -39,8 +39,8 @@ function lightbox() {
 
   // lightbox close
   function lightBoxClose() {
-    lightbox.classList.remove("active");
     document.body.classList.remove("no-scroll");
+    lightbox.classList.remove("active");
     lightbox.children[0].removeAttribute("src");
   }
   lightbox.onclick = () => lightBoxClose();
