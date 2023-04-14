@@ -41,7 +41,7 @@ function lightbox() {
   function lightBoxClose() {
     lightbox.classList.remove("active");
     document.body.classList.remove("no-scroll");
-    lightbox.children[0].setAttribute("src", "");
+    lightbox.children[0].removeAttribute("src");
   }
   lightbox.onclick = () => lightBoxClose();
   window.onscroll = () => lightBoxClose();
@@ -50,6 +50,10 @@ lightbox();
 
 /* ==================== CHANGE AOS EFFECT ON TABLET RESOLUTION ==================== */
 function changeEffect() {
+  const nav = document.querySelector(".nav");
+  if (window.innerWidth < 1026) {
+    nav.removeAttribute('data-aos')
+  }
   if (window.innerWidth < 769) {
     galleryItems.forEach((item) => {
       item.setAttribute("data-aos", "fade-up");
