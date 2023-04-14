@@ -92,6 +92,9 @@
 		font-size: 24px;
 		color: var(--text-color);
 	}
+	.nav__link--dark {
+		color: var(--text-color-inverted);
+	}
 	.nav__link:hover {
 		background: transparent;
 	}

@@ -25,7 +25,9 @@ function lightbox() {
     item.onclick = () => {
       // changing path to fullsize clicked image
       const src = item.children[0].getAttribute("src").split("/");
-      src.splice(src.indexOf("preview"), 1);
+      if (src.includes("preview")) {
+        src.splice(src.indexOf("preview"), 1);
+      }
       lightbox.children[0].setAttribute("src", src.join("/"));
       // lightbox show
       lightbox.classList.add("active");

@@ -12,7 +12,7 @@
 	top: calc(50% - 1px);
 	width: 20px;
 	height: 2px;
-	background: #FFFFFF;
+	background: var(--color-main);
 	opacity: 1;
 	transition: all var(--transition-fast);
 }
@@ -23,7 +23,7 @@
 	width: 20px;
 	height: 2px;
 	left: calc(50% - 10px);
-	background: #FFFFFF;
+	background: var(--color-main);
 	opacity: 1;
 	top: calc(50% - 1px);
 	transition: all var(--transition-fast);
@@ -35,18 +35,22 @@
 	transform: translate(0, -7px);
 }
 
+.burger--black .burger__line, .burger--black::before, .burger--black::after {
+	background: var(--color-second);
+}
+
 .burger.active .burger__line {
 	transform: scaleX(2);
 	opacity: 0;
-	background: #000000;
+	background: var(--color-second);
 }
 .burger.active.burger::before {
 	transform: translate(0, 0) rotate(45deg);
-	background: #000000;
+	background: var(--color-second);
 }
 .burger.active.burger::after {
 	transform: translate(0, 0) rotate(-45deg);
-	background: #000000;
+	background: var(--color-second);
 }
 
 
