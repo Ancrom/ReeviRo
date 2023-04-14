@@ -2,8 +2,6 @@
 AOS.init();
 
 /* ==================== BURGER ==================== */
-burger();
-
 function burger() {
   const burger = document.querySelector(".burger");
   const nav = document.querySelector(".nav__menu");
@@ -12,16 +10,16 @@ function burger() {
   burger.onclick = () => {
     burger.classList.toggle("active");
     nav.classList.toggle("active");
-		document.body.classList.toggle("no-scroll");
+    document.body.classList.toggle("no-scroll");
   };
 }
+burger();
 
 /* ==================== LIGHTBOX ==================== */
-lightbox();
+const galleryItems = document.querySelectorAll(".gallery__item");
 
 function lightbox() {
   const lightbox = document.querySelector(".lightbox");
-  const galleryItems = document.querySelectorAll(".gallery__item");
 
   galleryItems.forEach((item) => {
     item.onclick = () => {
@@ -31,14 +29,28 @@ function lightbox() {
       // lightbox show
       lightbox.children[0].setAttribute("src", src.join("/"));
       lightbox.classList.add("active");
+      if (window.innerWidth < 768) {
+        document.body.classList.add("no-scroll");
+      }
     };
   });
 
-  // lightbox close
-  lightbox.onclick = () => {
+	// lightbox close
+  function lightBoxClose() {
     lightbox.classList.remove("active");
-  };
-  window.onscroll = () => {
-    lightbox.classList.remove("active");
-  };
+    document.body.classList.remove("no-scroll");
+  }
+  lightbox.onclick = () => lightBoxClose();
+  window.onscroll = () => lightBoxClose();
 }
+lightbox();
+
+/* ==================== CHANGE AOS EFFECT ON TABLET RESOLUTION ==================== */
+function changeEffect() {
+  if (window.innerWidth < 769) {
+    galleryItems.forEach((item) => {
+      item.setAttribute("data-aos", "fade-up");
+    });
+  }
+}
+changeEffect();

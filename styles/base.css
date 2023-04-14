@@ -1,12 +1,21 @@
 /* ==================== VARIABLES ==================== */
 :root {
 	--container-width: 1280px;
+	--container-big: 1600px;
 	--site-padding: 40px;
 	--link-color: #ffffff;
 	--link-hover: #e99898;
 	--color-main: #f4f2ee;
+	--text-color: #ffffff;
+	--text-color-inverted: #000000;
 	--transition: 0.4s ease;
 	--transition-fast: 0.2s ease;
+}
+
+@media (max-width: 769px) {
+	:root {
+		--site-padding: 15px;
+	}
 }
 
 /* ==================== BASE ==================== */

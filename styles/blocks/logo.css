@@ -1,12 +1,17 @@
 /* ==================== LOGO ==================== */
 
 .logo {
-	font-size: 40px;
 	font-weight: 400;
-	color: #ffffff;
+	color: var(--text-color);
 	text-shadow: 1px 1px 2px rgb(0, 0, 0);
 }
 
 .logo--white {
-	color: #ffffff;
+	color: var(--text-color);
+}
+
+@media (min-width: 601px) {
+	.logo {
+		font-size: 40px;
+	}
 }

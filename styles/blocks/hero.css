@@ -1,10 +1,11 @@
 /* ==================== HERO ==================== */
 
 .hero {
-	background: no-repeat top / cover url(./../../img/Valorant_zine_illustration_ReeviRo.webp);
+	background: no-repeat 0 0 / auto 100vh url(./../../img/Valorant_zine_illustration_ReeviRo.webp);
 	background-attachment: fixed;
-	color: #FFFFFF;
+	color: var(--text-color);
 	text-align: center;
+	transition: background var(--transition);
 }
 .hero__container {
 	display: flex;
@@ -14,12 +15,25 @@
 	min-height: 100vh;
 }
 .hero__title {
-	font-size: 90px;
+	font-size: 45px;
 	line-height: 1.1;
 	text-shadow: 1px 1px 2px rgb(0, 0, 0);
 	text-transform: uppercase;
 }
 .hero__subtitle {
-	font-size: 34px;
+	font-size: 24px;
 	text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+
+@media (min-width: 601px) {
+	.hero {
+		background-position: 50% 0;
+		background-size: cover;
+	}
+	.hero__title {
+		font-size: 90px;
+	}
+	.hero__subtitle {
+		font-size: 34px;
+	}
 }

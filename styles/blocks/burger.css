@@ -1,9 +1,8 @@
 /* ==================== BURGER ==================== */
 
 .burger {
-	padding: 15px 20px;
+	padding: 25px 30px;
 	position: relative;
-	display: none;
 	z-index: 9999;
 }
 .burger__line {
@@ -51,8 +50,8 @@
 }
 
 
-@media (max-width: 769px) {
+@media (min-width: 1026px) {
 	.burger {
-		display: block;
+		display: none;
 	}
 }
