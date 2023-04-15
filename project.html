@@ -16,8 +16,6 @@
 	<!-- blocks styles -->
 	<link rel="stylesheet" href="./styles/blocks/nav.css">
 	<link rel="stylesheet" href="./styles/blocks/burger.css">
-	<link rel="stylesheet" href="./styles/blocks/logo.css">
-	<link rel="stylesheet" href="./styles/blocks/hero.css">
 	<link rel="stylesheet" href="./styles/blocks/gallery.css">
 	<link rel="stylesheet" href="./styles/blocks/footer.css">
 	<link rel="stylesheet" href="./styles/blocks/social.css">
@@ -31,30 +29,30 @@
 <body>
 	<nav class="nav" data-aos="fade-down" data-aos-duration="500" data-aos-once="true">
 		<div class="nav__container container">
-			<button class="nav__burger burger burger--white">
+			<button class="nav__burger burger burger--black">
 				<span class="burger__line"></span>
 			</button>
 			<div class="nav__menu">
 				<ul class="nav__list">
-					<!-- <li class="nav__item">
-						<a class="nav__link active">home</a>
-					</li> -->
 					<li class="nav__item">
-						<a href="./concept.html" class="nav__link">concept</a>
+						<a href="./index.html" class="nav__link nav__link--dark">home</a>
 					</li>
 					<li class="nav__item">
-						<a href="./illustration.html" class="nav__link">illustration</a>
+						<a href="./concept.html" class="nav__link nav__link--dark">concept</a>
 					</li>
 					<li class="nav__item">
-						<a href="./project.html" class="nav__link">project</a>
+						<a href="./illustration.html" class="nav__link nav__link--dark">illustration</a>
 					</li>
 					<li class="nav__item">
-						<a href="./personal-work.html" class="nav__link">personal work</a>
+						<a class="nav__link nav__link--dark active">project</a>
 					</li>
 					<li class="nav__item">
-						<a href="./about.html" class="nav__link">about</a>
+						<a href="./personal-work.html" class="nav__link nav__link--dark">personal work</a>
 					</li>
-					<li class="nav__item nav__contact-me">
+					<li class="nav__item">
+						<a href="./about.html" class="nav__link nav__link--dark">about</a>
+					</li>
+					<li class="nav__item  nav__contact-me">
 						<a href="mailto:natalia2dartist@gmail.com" target="_blank" class="nav__link">Contact me</a>
 					</li>
 				</ul>
@@ -64,49 +62,8 @@
 	</nav>
 	<!-- ========== /nav ========== -->
 	<main class="main">
-		<section class="hero">
-			<div class="hero__container container"  data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
-				<h1 class="hero__title">Natalya&nbsp;Samutina</h1>
-				<div class="logo logo--white">
-					<a href="./index.html">ReeviRo</a>
-				</div>
-				<div class="hero__subtitle">Concept&nbsp;Artist&nbsp;& Illustrator</div>
-			</div>
-			<!-- ========== /container ========== -->
-		</section>
-		<!-- ========== /hero ========== -->
 		<section class="gallery">
-			<div class="gallery__container container gallery__container--col-2">
-				<div class="gallery__column gallery__column--col-2">
-					<div class="gallery__item" data-aos="fade-down-right" data-aos-duration="500" data-aos-once="true">
-						<img src="./img/main/preview/Foxgirl.webp" alt="Portfolio picture" class="gallery__image">
-						<span class="gallery__text">Foxgirl</span>
-					</div>
-					<div class="gallery__item" data-aos="fade-right" data-aos-duration="500" data-aos-once="true">
-						<img src="./img/main/preview/Gwen_Seamstress.webp" alt="Portfolio picture" class="gallery__image">
-						<span class="gallery__text">Gwen Seamstress</span>
-					</div>
-					<div class="gallery__item" data-aos="fade-up-right" data-aos-duration="500" data-aos-once="true">
-						<img src="./img/main/preview/Ice_knight.webp" alt="Portfolio picture" class="gallery__image">
-						<span class="gallery__text">Ice knight</span>
-					</div>
-				</div>
-				<div class="gallery__column gallery__column--col-2">
-					<div class="gallery__item" data-aos="fade-down-left" data-aos-duration="500" data-aos-once="true">
-						<img src="./img/main/preview/Hades2_fanart.webp" alt="Portfolio picture" class="gallery__image">
-						<span class="gallery__text">Hades2 fanart</span>
-					</div>
-					<div class="gallery__item" data-aos="fade-left" data-aos-duration="500" data-aos-once="true">
-						<img src="./img/main/preview/Ice_legend.webp" alt="Portfolio picture" class="gallery__image">
-						<span class="gallery__text">Ice legend</span>
-					</div>
-					<div class="gallery__item" data-aos="fade-up-left" data-aos-duration="500" data-aos-once="true">
-						<img src="./img/main/preview/Lava_elemental.webp" alt="Portfolio picture" class="gallery__image">
-						<span class="gallery__text">Lava elemental</span>
-					</div>
-				</div>
-			</div>
-			<!-- ========== /container ========== -->
+
 		</section>
 		<!-- ========== /gallery ========== -->
 	</main>

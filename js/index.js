@@ -38,11 +38,11 @@ function lightbox() {
   });
 
   // lightbox close
-  function lightBoxClose() {
+  const lightBoxClose = function () {
     document.body.classList.remove("no-scroll");
     lightbox.classList.remove("active");
     lightbox.children[0].removeAttribute("src");
-  }
+  };
   lightbox.onclick = () => lightBoxClose();
   window.onscroll = () => lightBoxClose();
 }
@@ -52,12 +52,17 @@ lightbox();
 function changeEffect() {
   const nav = document.querySelector(".nav");
   if (window.innerWidth < 1026) {
-    nav.removeAttribute('data-aos')
+    nav.removeAttribute("data-aos");
   }
   if (window.innerWidth < 769) {
     galleryItems.forEach((item) => {
       item.setAttribute("data-aos", "fade-up");
     });
   }
+  // if (window.innerWidth < 425) {
+  //   galleryItems.forEach((item) => {
+  //     item.setAttribute("data-aos", "");
+  //   });
+  // }
 }
 changeEffect();
