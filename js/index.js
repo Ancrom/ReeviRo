@@ -35,7 +35,7 @@ function lightbox() {
   const lightbox = document.querySelector(".lightbox");
   galleryItems.forEach((item) => {
     item.onclick = () => {
-      // changing path to fullsize clicked image
+      // changing path to fullsize image
       const src = item.children[0].getAttribute("src").split("/");
       if (src.includes("preview")) src.splice(src.indexOf("preview"), 1);
       lightbox.children[0].setAttribute("src", src.join("/"));
