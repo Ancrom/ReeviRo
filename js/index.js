@@ -3,10 +3,8 @@ AOS.init();
 const galleryItems = document.querySelectorAll(".gallery__item");
 function changeEffect() {
   const nav = document.querySelector(".nav");
-  const footer = document.querySelector(".footer");
   if (window.innerWidth < 1026) {
     nav.removeAttribute("data-aos");
-    footer.removeAttribute("data-aos");
   }
   if (window.innerWidth < 769) {
     galleryItems.forEach((item) => {
