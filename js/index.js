@@ -1,5 +1,18 @@
 /* ==================== ANIMATE ON SCROLL ==================== */
 AOS.init();
+const galleryItems = document.querySelectorAll(".gallery__item");
+function changeEffect() {
+  const nav = document.querySelector(".nav");
+  if (window.innerWidth < 1026) {
+    nav.removeAttribute("data-aos");
+  }
+  if (window.innerWidth < 769) {
+    galleryItems.forEach((item) => {
+      item.setAttribute("data-aos", "fade-up");
+    });
+  }
+}
+changeEffect();
 
 /* ==================== BURGER ==================== */
 function burger() {
@@ -16,8 +29,6 @@ function burger() {
 burger();
 
 /* ==================== LIGHTBOX ==================== */
-const galleryItems = document.querySelectorAll(".gallery__item");
-
 function lightbox() {
   const lightbox = document.querySelector(".lightbox");
 
@@ -48,21 +59,3 @@ function lightbox() {
 }
 lightbox();
 
-/* ==================== CHANGE AOS EFFECT ON TABLET RESOLUTION ==================== */
-function changeEffect() {
-  const nav = document.querySelector(".nav");
-  if (window.innerWidth < 1026) {
-    nav.removeAttribute("data-aos");
-  }
-  if (window.innerWidth < 769) {
-    galleryItems.forEach((item) => {
-      item.setAttribute("data-aos", "fade-up");
-    });
-  }
-  // if (window.innerWidth < 425) {
-  //   galleryItems.forEach((item) => {
-  //     item.setAttribute("data-aos", "");
-  //   });
-  // }
-}
-changeEffect();
