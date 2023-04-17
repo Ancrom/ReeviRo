@@ -1,16 +1,23 @@
-/* ==================== ANIMATE ON SCROLL ==================== */
-AOS.init();
+/* ==================== BASE ==================== */
+
 const galleryItems = document.querySelectorAll(".gallery__item");
-function changeEffect() {
+AOS.init(); // animate on scroll initialize
+changeAOSEffect(); // change AOS effect for some blocks depending on resolution
+window.onresize = () => changeAOSEffect();
+burger();
+lightbox();
+
+/* ==================== CHANGE AOS EFFECT ==================== */
+
+function changeAOSEffect() {
   const nav = document.querySelector(".nav");
   if (window.innerWidth < 1026) nav.removeAttribute("data-aos");
   if (window.innerWidth < 769)
     galleryItems.forEach((item) => item.setAttribute("data-aos", "fade-up"));
 }
-window.onresize = () => changeEffect();
-changeEffect();
 
 /* ==================== BURGER ==================== */
+
 function burger() {
   const burger = document.querySelector(".burger");
   const nav = document.querySelector(".nav__menu");
@@ -21,9 +28,9 @@ function burger() {
     document.body.classList.toggle("no-scroll");
   };
 }
-burger();
 
 /* ==================== LIGHTBOX ==================== */
+
 function lightbox() {
   const lightbox = document.querySelector(".lightbox");
   galleryItems.forEach((item) => {
@@ -42,8 +49,7 @@ function lightbox() {
     document.body.classList.remove("no-scroll");
     lightbox.classList.remove("active");
     lightbox.children[0].removeAttribute("src");
-  }
+  };
   lightbox.onclick = () => lightBoxClose();
   window.onscroll = () => lightBoxClose();
 }
-lightbox();
