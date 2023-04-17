@@ -3,14 +3,9 @@ AOS.init();
 const galleryItems = document.querySelectorAll(".gallery__item");
 function changeEffect() {
   const nav = document.querySelector(".nav");
-  if (window.innerWidth < 1026) {
-    nav.removeAttribute("data-aos");
-  }
-  if (window.innerWidth < 769) {
-    galleryItems.forEach((item) => {
-      item.setAttribute("data-aos", "fade-up");
-    });
-  }
+  if (window.innerWidth < 1026) nav.removeAttribute("data-aos");
+  if (window.innerWidth < 769)
+    galleryItems.forEach((item) => item.setAttribute("data-aos", "fade-up"));
 }
 window.onresize = () => changeEffect();
 changeEffect();
@@ -43,7 +38,7 @@ function lightbox() {
     };
   });
   // lightbox close
-  function lightBoxClose() {
+  const lightBoxClose = () => {
     document.body.classList.remove("no-scroll");
     lightbox.classList.remove("active");
     lightbox.children[0].removeAttribute("src");
