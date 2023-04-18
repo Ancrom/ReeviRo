@@ -15,16 +15,10 @@
 	margin: 0 0 30px 0;
 }
 .about__photo {
-	position: relative;
 	padding: 50%;
 }
 .about__image {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	min-height: 100%;
-	object-fit: cover;
+	object-position: top;
 }
 .about__right {
 	max-width: 510px;

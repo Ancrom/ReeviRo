@@ -5,22 +5,18 @@
 	color: var(--text-color);
 	text-align: center;
 	transition: background var(--transition);
-}
-.hero__container {
+	min-height: 100vh;
 	display: flex;
 	flex-flow: column;
 	justify-content: center;
 	align-items: center;
-	min-height: 100vh;
 }
 .hero__title {
 	font-size: 45px;
-	line-height: 1.1;
 	text-shadow: 1px 1px 2px rgb(0, 0, 0);
 	text-transform: uppercase;
 }
 .hero__subtitle {
-	font-size: 24px;
 	text-shadow: 1px 1px 2px rgb(0, 0, 0);
 }
 
@@ -34,5 +30,11 @@
 	}
 	.hero__subtitle {
 		font-size: 34px;
+	}
+}
+
+@media (orientation: portrait) and (max-width: 1081px) {
+	.hero {
+		background-position: 8% 0;
 	}
 }
