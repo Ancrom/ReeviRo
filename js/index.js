@@ -13,7 +13,10 @@ function changeAOSEffect() {
   const nav = document.querySelector(".nav");
   if (window.innerWidth < 1026) nav.dataset.aos = "";
   if (window.innerWidth < 769)
-    galleryItems.forEach((item) => (item.dataset.aos = "fade-up"));
+    galleryItems.forEach((item) => {
+      item.dataset.aos = "fade-up";
+      item.dataset.aosDelay = "";
+    });
 }
 
 /* ==================== BURGER ==================== */
