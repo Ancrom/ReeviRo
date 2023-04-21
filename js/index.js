@@ -43,9 +43,9 @@ function lightbox() {
   const lightboxShow = (item) => {
     // changing scr to fullsize image
     const image = item.children[0];
-    const src = image.getAttribute("src").split("/");
-    if (src.includes("preview")) src.splice(src.indexOf("preview"), 1);
-    lightboxImage.setAttribute("src", src.join("/"));
+    const src = image.getAttribute("src");
+    const newSrc = src.replace('/preview/', '/')
+		lightboxImage.setAttribute('src', newSrc)
     lightbox.classList.add("active");
     if (window.innerWidth < 768) document.body.classList.add("no-scroll");
   };
