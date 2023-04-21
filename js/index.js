@@ -38,25 +38,24 @@ function burger() {
 
 function lightbox() {
   const lightbox = document.querySelector(".lightbox");
-  const accordionImgs = document.querySelectorAll(".accordion__img");
-  // lightbox show
+  const lightboxImage = lightbox.children[0];
+  const accordionImages = document.querySelectorAll(".accordion__img");
   const lightboxShow = (item) => {
     // changing scr to fullsize image
-    const src = item.children[0].getAttribute("src").split("/");
+    const image = item.children[0];
+    const src = image.getAttribute("src").split("/");
     if (src.includes("preview")) src.splice(src.indexOf("preview"), 1);
-    lightbox.children[0].setAttribute("src", src.join("/"));
+    lightboxImage.setAttribute("src", src.join("/"));
     lightbox.classList.add("active");
     if (window.innerWidth < 768) document.body.classList.add("no-scroll");
   };
-  // lightbox close
   const lightBoxClose = () => {
     document.body.classList.remove("no-scroll");
     lightbox.classList.remove("active");
-    lightbox.children[0].removeAttribute("src");
+    lightboxImage.removeAttribute("src");
   };
-
-  galleryItems.forEach((item) => item.onclick = () => lightboxShow(item));
-  accordionImgs.forEach((item) => item.onclick = () => lightboxShow(item));
+  galleryItems.forEach((item) => (item.onclick = () => lightboxShow(item)));
+  accordionImages.forEach((item) => (item.onclick = () => lightboxShow(item)));
   lightbox.onclick = () => lightBoxClose();
   window.onscroll = () => lightBoxClose();
 }
@@ -65,19 +64,20 @@ function lightbox() {
 
 function accordion() {
   const accordionBtns = document.querySelectorAll(".accordion__btn");
-  accordionBtns.forEach((accordion) => {
-    accordion.onclick = function () {
-      this.classList.toggle("active");
-      let content = this.nextElementSibling;
+  accordionBtns.forEach((item) => {
+    item.onclick = () => {
+      item.classList.toggle("active");
+      const content = item.nextElementSibling;
+      const btnText = item.children[1];
       // accordion close
       if (content.style.maxHeight) {
         content.style.maxHeight = null;
-        this.children[1].innerHTML = "Click to reveal";
+        btnText.innerHTML = "Click to expand";
       }
       // accordion show
       else {
         content.style.maxHeight = content.scrollHeight + "px";
-        this.children[1].innerHTML = "Click to hide";
+        btnText.innerHTML = "Click to hide";
       }
     };
   });
