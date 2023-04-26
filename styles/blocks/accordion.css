@@ -50,6 +50,7 @@
 	font-size: 26px;
 	transition: var(--transition);
 	z-index: 2;
+	pointer-events: none;
 }
 .accordion__btn::after {
 	content: "";
@@ -67,21 +68,21 @@
 	overflow: hidden;
 	transition: max-height 0.3s ease;
 }
-.accordion__img {
+.accordion__img-wrapper {
 	width: 100%;
 	cursor: zoom-in;
 	overflow: hidden;
 }
-.accordion__img img {
+.accordion__img-wrapper img {
 	width: 100%;
 	transition: transform var(--transition);
 }
-.accordion__img:hover img {
+.accordion__img-wrapper:hover img {
 	transform: scale(1.05);
 	transition: transform var(--transition);
 	overflow: hidden;
 }
-.accordion__img + .accordion__img {
+.accordion__img-wrapper + .accordion__img-wrapper {
 	margin: 15px 0 0 0;
 }
 

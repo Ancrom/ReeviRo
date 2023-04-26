@@ -33,6 +33,7 @@
 	opacity: 0;
 	transition: opacity var(--transition);
 	z-index: 2;
+	pointer-events: none; 
 }
 .gallery__item:hover .gallery__image {
 	transform: scale(1.05);

@@ -15,6 +15,7 @@
 	background: var(--color-main);
 	opacity: 1;
 	transition: all var(--transition-fast);
+	pointer-events: none;
 }
 .burger::before,
 .burger::after {
@@ -27,6 +28,7 @@
 	opacity: 1;
 	top: calc(50% - 1px);
 	transition: all var(--transition-fast);
+	pointer-events: none;
 }
 .burger::before {
 	transform: translate(0, 7px);
