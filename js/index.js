@@ -27,7 +27,6 @@ function eventListener() {
   const lightboxImage = lightbox.querySelector("img");
   const nav = document.querySelector(".nav__menu");
   const burger = document.querySelector(".burger");
-  burger.prevent;
 
   const toggleBurger = () => {
     burger.classList.toggle("active");
